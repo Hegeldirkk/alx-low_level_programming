@@ -1,4 +1,4 @@
-#!/bin/basha
+#!/bin/bash
 
 #C Programming
 
