@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *print_alphabet - check the code print 10 A...Z
+ *print_alphabet - check the code print
  *
  *Return: Always 0.
  */
