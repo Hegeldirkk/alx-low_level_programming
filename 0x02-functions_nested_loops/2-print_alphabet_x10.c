@@ -7,10 +7,10 @@
  */
 void print_alphabet_x10(void)
 {
-char c = 'a';
 int time;
-for (time = 0; time < 10; time++)
+for (time = 0; time < 9; time++)
 {
+char c ='a';
 while (c <= 'z')
 {
 _putchar(c);
