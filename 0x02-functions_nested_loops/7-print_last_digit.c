@@ -12,7 +12,7 @@ n = n % 10;
 if (n < 0)
 {
 n = -n;
-_putchar('%d' + '0',n);
+_putchar(n + '0');
 return (n);
 }
 return (n);
