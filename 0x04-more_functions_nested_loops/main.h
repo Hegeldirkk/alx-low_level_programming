@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-void print_numbers(void);
+extern int _isupper(int c);
+extern int _isdigit(int c);
+extern int mul(int a, int b);
+extern void print_numbers(void);
 #endif
