@@ -11,8 +11,6 @@ int _putchar(char c);
  *
  * No return
  */
-
-
 void print_number(int n)
 {
 
