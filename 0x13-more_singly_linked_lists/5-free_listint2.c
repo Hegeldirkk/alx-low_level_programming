@@ -16,6 +16,6 @@ void free_listint2(listint_t **head)
 		freenode = freelist->next;
 		free(freelist);
 		freelist = freenode;
+		*head = freenode;
 	}
-	*head = NULL;
 }
