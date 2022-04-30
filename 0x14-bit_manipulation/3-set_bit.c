@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * get_bit - returns the value of a bit.
- * @n: int and long number.
+ * set_bit - returns the value of a bit.
+ * @n: point to  long  number.
  * @index: unsigned int number.
  * Return: value of the bit at index index or -1.
  */
