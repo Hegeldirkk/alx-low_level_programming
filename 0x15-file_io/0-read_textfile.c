@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "main.h"
 /**
  * read_textfile - reads text file and prints.
  * @filename: pointer file in char type.
