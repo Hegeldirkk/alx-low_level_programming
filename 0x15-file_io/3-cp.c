@@ -6,6 +6,7 @@
  * @argv: array of type chars
  * Return: 0.
  */
+
 int main(int argc, char *argv[])
 {
 	int fo_r, fo_w, x, m, n;
