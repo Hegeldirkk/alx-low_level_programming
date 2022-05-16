@@ -30,6 +30,6 @@ int main(void)
 		}
 		c++;
 	}
-	putchar('\n');
+	exit(EXIT_SUCCESS);
 	return (0);
 }
