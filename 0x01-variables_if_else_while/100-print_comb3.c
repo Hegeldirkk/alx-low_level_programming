@@ -23,8 +23,11 @@ int main(void)
 					putchar(48 + ++b);
 				else
 					putchar(48 + b);
-				putchar(',');
-				putchar(' ');
+				if (c < 8)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 			a++;
 		}
