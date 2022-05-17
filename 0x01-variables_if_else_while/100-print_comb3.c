@@ -26,8 +26,8 @@ int main(void)
 				if (c < 8)
 				{
 					putchar(',');
-					putchar(' ');
 				}
+				putchar(' ');
 			}
 			a++;
 		}
