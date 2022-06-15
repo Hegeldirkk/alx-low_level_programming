@@ -10,11 +10,11 @@ int main(void)
 {
 	int i, j;
 
-	for (i = 48; i < 58; i++)
+	for (i = 48; i < 57; i++)
 	{
 		for (j = 48; j < 58; j++)
 		{
-			if (i == j)
+			if (i == j || j <= i)
 			{
 				continue;
 			}
