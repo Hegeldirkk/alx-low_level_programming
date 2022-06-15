@@ -8,31 +8,29 @@
 
 int main(void)
 {
-	int c = 0;
-	int b = 0;
-	int a = 0;
+	int i, j;
 
-	while (c < 10)
+	for (i = 48; i < 58; i++)
 	{
-		if (c != 9)
+		for (j = 48; j < 58; j++)
 		{
-			for (b = a; b < 10; b++)
+			if (i == j)
 			{
-				putchar(48 + c);
-				if (c == b)
-					putchar(48 + ++b);
-				else
-					putchar(48 + b);
-				if (c < 8)
-				{
-					putchar(',');
-				}
+				continue;
+			}
+			putchar(i);
+			putchar(j);
+			if (i == 56 && j == 57)
+			{
+				break;
+			}
+			else
+			{
+				putchar(',');
 				putchar(' ');
 			}
-			a++;
 		}
-		c++;
 	}
-	exit(EXIT_SUCCESS);
+	putchar('\n');
 	return (0);
 }
