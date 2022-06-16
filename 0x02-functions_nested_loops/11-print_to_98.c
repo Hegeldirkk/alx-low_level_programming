@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * print_to_98 - prints numbers
@@ -10,82 +11,38 @@
 
 void print_to_98(int n)
 {
-	int end_print;
+	int i;
+	int s;
 
-	end_print = 98;
-
-	if (n < end_print)
-	{
-		for (; n <= end_print; n++)
-		{
-			if (n == 98)
-			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-				break;
-			}
-			else
-			{
-				if (n >= -9 && n <= 9)
-				{
-					if (n < 0)
-					{
-						_putchar('-');
-						_putchar((n * -1) + '0');
-						_putchar(',');
-						_putchar(' ');
-					}
-					else if (n >= 0)
-					{
-						_putchar(n + '0');
-						_putchar(',');
-						_putchar(' ');
-					}
-				}
-				else if (n >= 100)
-				{
-					_putchar((n / 100) + '0');
-					_putchar((n / 10) + '0');
-					_putchar((n % 10) + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar((n / 10) + '0');
-					_putchar((n % 10) + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
-			}
-		}
-		_putchar('\n');
-	}
-	else if (n == 0)
-	{
-		_putchar((n / 10) + '0');
-		_putchar((n % 10) + '0');
-		_putchar('\n');
-	}
+	if (n > 98)
+		s = -1;
+	else if (n < 98)
+		s = 1;
 	else
-	{
-		for (; n >= end_print; n--)
+		s = 0;
+
+	i = n;
+
+	do {
+		if (i < 0)
+			_putchar('-');
+		if (abs(i) > 99)
+			_putchar('0' + abs(i) / 100);
+		if (abs(i) > 9)
+			_putchar('0' + (abs(i) % 100) / 10);
+		_putchar('0' + abs(i) % 10);
+		if (i != 98)
+			{
+			_putchar(',');
+			_putchar(' ');
+			}
+
+		i = i + s;
+	} while (i != 98);
+	if (n != 98)
 		{
-			if (n == 98)
-			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-				break;
-			}
-			else
-			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-				_putchar(',');
-				_putchar(' ');
-			}
+		_putchar('9');
+		_putchar('8');
 		}
-		_putchar('\n');
-	}
-	return;
+	_putchar('\n');
 }
