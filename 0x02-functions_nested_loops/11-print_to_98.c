@@ -4,8 +4,6 @@
 /**
  * print_to_98 - prints numbers
  * @n: n parametre
- *
- * Description: prints 
  * Return: Always 0
  */
 
