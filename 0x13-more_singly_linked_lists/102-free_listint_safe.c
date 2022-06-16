@@ -7,32 +7,42 @@
  *
  * Return: elements in the freed list
  */
-
 size_t free_listint_safe(listint_t **h)
 {
-	size_t len = 0;
-	int diff;
-	listint_t *temp;
+	size_t size = 0;
+	size_t i;
+	listint_t *next;
+	listint_t *array[500];
 
-	if (!h || !*h)
+	if (h == NULL || *h == NULL)
 		return (0);
 
 	while (*h)
 	{
-		diff = *h - (*h)->next;
-		if (diff > 0)
+		i = 0;
+		while (i < size)
 		{
-			temp = (*h)->next;
-			*h = temp;
-			len++;
+			if (array[i] == *h)
+			{
+				*h = NULL;
+				h = NULL;
+				return (size);
+			}
+			i++;
 		}
-		else
-		{
-			*h = NULL;
-			len++;
-			break;
-		}
+
+		array[size] = *h;
+
+		next = (*h)->next;
+		(*h)->next = NULL;
+		free(*h);
+		*h = next;
+		size++;
 	}
+
+
 	*h = NULL;
-	return (len);
+	h = NULL;
+
+	return (size);
 }
