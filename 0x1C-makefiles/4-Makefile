@@ -13,7 +13,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 
 #rule build
 all: $(OBJ)
-        $(CC) $(OBJ) -o $(NAME)
+        $(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) *~ $(NAME)
