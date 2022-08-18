@@ -1,0 +1,14 @@
+#Description:Create your first useful Makefile.
+#Name:  name of the executable "school"
+#rules: "all"
+#variables: CC [for compiler], SRC [for .c files], OBJ [for .o file], NAME [for executable name]
+
+#Variables
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:%.c=%.o)
+NAME = school
+
+#rule build
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
