@@ -12,7 +12,7 @@ RM = rm -rf
 .PHONY: clean oclean fclean re
 
 #rule build
-all: $(OBJ)
+all: school
         $(CC) $(OBJ) -o $(NAME)
 
 clean:
